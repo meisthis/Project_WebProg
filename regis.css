@@ -1,0 +1,301 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Calibri Light";
+}
+
+a:hover{
+	cursor:pointer;
+	color: black;
+	border-bottom: 1px solid black;
+}
+
+.header{
+	width: 100%;
+	height: 100px;
+	display: flex;
+}
+
+.logo{
+	width: 35%;
+}
+
+.logo img
+{
+	width: 100%;
+	height: 100px;
+}
+
+.nav-bar{
+	width: 65%;
+	height: 100px;
+	text-align: center;
+	margin-top: 35px;
+}
+
+.nav-bar>a{
+	position: sticky;
+	top: 0;
+	margin-left: 80px;
+	width: 33.3%;
+	text-decoration: none;
+}
+
+.nav-bar>p{
+	width: 100%;
+	border: 1px solid black;
+	margin-top: 45px;
+}
+
+.content input[type=text], input[type=password] {
+	font-size: 16px;
+    width: 95%;
+    padding: 15px;
+    margin: 2px 0 10px 0;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    background: #ffdbb3;
+}
+
+.content{
+	/*padding: 35px;*/
+	/*padding-top: 50px;*/
+	width: 80%;
+	height: 830px;
+	margin: auto;
+
+}
+
+.content-fill{
+	padding: 85px;
+	margin: auto;
+	width: 40%;
+	height: 650px;
+	background-color: white;
+}
+
+.content-fill h1{
+	text-align:center;
+}
+
+.content-fill p{
+	text-align:center;
+	color: red;
+}
+
+.registerbtn
+{
+	cursor: pointer;
+	padding: 15px;
+	background-color: #750000;
+	border: none;
+	color: white;
+	text-align: center;
+	margin: 5px 2px;
+	font-size: 16px;
+	opacity: 1;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.registerbtn:hover{
+	opacity: 0.7;
+}
+
+.radio{
+	padding-left: 20px;
+	display: flex;
+}
+
+.footer{
+	height: 200px;
+	width: 100%;
+	display: flex;
+}
+
+.footer p{
+	padding-top: 5px;
+	color: #595959;
+}
+
+.contactUs{
+	width: 100%;
+	height: 150px;
+	margin: auto;
+	padding-left: 50px;
+	padding-top: 30px;
+	/*border: 2px solid red;*/
+}
+
+.contactUs input[type=text]{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0px 5px 0px;
+    display: inline-block;
+    border: 1px solid;
+    border-color: black;
+    font-size: 14px;
+}
+
+.contactUs button{
+	padding: 10px;
+	color: white;
+	background-color: #750000;
+	cursor: pointer;
+	border: 1px solid;
+	border-color: #750000;
+	font-size: 14px;
+}
+
+.contactUs button:hover
+{
+	color: #750000;
+	background-color: #ffdbb3;
+}
+
+.contactUs h3{
+	font-size: 16px;
+}
+
+.contactUs p{
+	font-size: 14px;
+}
+
+.copyright{
+	width: 100%;
+	height:150px;
+	padding-top: 30px;
+	padding-left: 50px;
+	margin: auto;
+	/*border: 1px solid blue;*/
+}
+
+.copyright p{
+	margin: auto;
+	font-size: 14px;
+}
+
+.dot{
+	height: 30px;
+	width: 30px;
+	padding-top: 15px;
+	padding-right: 5px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.dot img{
+	height: 100%;
+	width: 100%;
+	/*padding-top: 10px;*/
+}
+
+.dot img:hover{
+	opacity: 0.6;
+	filter: alpha(opacity=50);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+	.header1 img{
+		width: 100%;
+		height: 50px;
+		padding-top: 25px;
+		padding-left: 0px;
+	}
+
+	.background{
+		width: 100%;
+		height: 100%;
+
+	}
+
+	.header1 p{
+		padding-left: 40px;
+	}
+
+	.content{
+		width: 100%;
+		height: 830px;
+	}
+
+	.content-fill{
+		padding: 0px;
+		width: 100%;
+	}
+
+	.content-right img{
+		width: 100%;
+		height: 100%;
+		padding-left: 0px;
+	}
+
+	.content-left img{
+		width: 80%;
+		height: 100%;
+		padding-left: 0px;
+	}
+
+	.overlay{
+		position: absolute;
+		bottom: 110px;
+		background-color: #999955;
+		overflow: hidden;
+		width: 0;
+		height: 350px;
+		transition: .5s ease;
+	}
+
+	.content-left:hover .overlay{
+		width: 45%;
+	}
+
+	.content-right:hover .overlay{
+		width: 45%;
+	}
+
+	.nav-itemContent{
+		padding-top: 8px;
+		min-width: 100px;
+		z-index: 5;
+	}
+
+	.nav-item:target{
+		cursor: pointer;
+		background-color: grey;
+	}
+
+	.nav-itemContent a:hover{
+		background-color: grey;
+	}
+
+	.footer{
+		height: 170px;
+		width: 100%;
+	}
+
+	.contactUs{
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		margin: auto;
+		padding-top: 30px;
+	}
+
+	.copyright{
+		padding-top: 20px;
+		width: 100%;
+		height:70px;
+	}
+
+	.contactUs h1{
+		padding-right: 300px;
+		padding-left: 0px;
+		font-size: 20px;
+	}
+
+	.copyright>b>i>p{
+		padding-top: 0px;	
+	}
+}

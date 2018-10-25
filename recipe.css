@@ -7,22 +7,10 @@
 a:hover{
 	cursor:pointer;
 	color: black;
-	border-bottom: 1px solid black;
-}
-
-.full-content{
-	height: 800px;
-	width: 100%;
 }
 
 .header{
 	height: 100px;
-	width: 100%;
-	display: flex;
-}
-
-.footer{
-	height: 200px;
 	width: 100%;
 	display: flex;
 }
@@ -57,114 +45,174 @@ a:hover{
 	margin-top: 45px;
 }
 
-.instruction{
-	padding-top: 15px;
-	height: 8%;
-	text-align: center;
-	/*border: 2px solid black;*/
-}
-
-.instruction h1{
-	font-family: "andalus";
-}
-
-.ingredient{
-	height: 90%;
+.full-content{
+	height: 800px;
 	width: 100%;
-	/*border: 1px solid blue;*/
+}
+
+.full-content h1{
+	font-family: andalus;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.full-content hr{
+	width: 60%;
+	margin: auto;
+}
+
+.recipes{
 	display: flex;
-}
-
-.ingredient-label{
-	width: 20%;
-	height: 100%;
-	border: 2px solid black;
-}
-
-.ingredient-label>h3{
+	margin-top: 30px;
+	height: 700px;
 	width: 100%;
-	height: 7%;
-	text-align:center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-family: andalus;
-	border: 1px solid black;
 }
 
-.label{
+.recipe1{
 	width: 100%;
-	height: 100%;
-}
-
-.label>button{
-	text-decoration: none;
-	width: 100%;
-	height: 7.3%;
 	display: block;
-	text-align: center;
-	padding: 15px 0px 25px 0px;
-	margin-top: 15px;
-	background: none;
-	font-size: 16px;
-	border: none;
 }
 
-.label>button:hover{
-	cursor: pointer;
-	font-size: 20px;
-}
-
-.ingredient-list{
+.recipe1 img{
 	width: 80%;
-	height: 100%;
-	/*border: 1px solid black;*/
+	height: 30%;
+	margin-left: 10%;
+	margin-top: 5%;
 }
 
-.ingredient-list>h3{
-	width: 100%;
-	height: 7%;
+.recipe1 h3{
 	text-align: center;
-	font-family: andalus;
-	padding-bottom: 22px;
-	padding-top: 20px;
-	border: 1px solid black;
+	color: #750000;
 }
 
-.input-button{
-	padding-left: 50%;
-	margin-top: 25px;
+.recipe1 p{
+	text-align: center;
+	font-size: 14px;
 }
 
-.input-button>input:hover{
+.recipe1:hover{
 	cursor: pointer;
-	color: white;
-	background-color: #750000;
 }
 
-#input-checkbox{
-	height: 80%;
+.recipe11{
 	width: 100%;
-	padding-left: 50%;
 	display: block;
 }
 
-#input-checkbox>input{
-	padding-top: 5px;
-	padding-bottom: 5px;
+.recipe11 img{
+	width: 80%;
+	height: 30%;	
+	margin-left: 10%;
+	margin-top: 5%;
 }
 
-/*#input-checkbox>p{
-	padding-top: 5px;
-	padding-bottom: 5px;
-}*/
+.recipe11 h3{
+	text-align: center;
+	color: #750000;
+}
 
-#input-checkbox>input:hover{
+.recipe11 p{
+	text-align: center;
+	font-size: 14px;
+}
+
+.recipe11:hover{
 	cursor: pointer;
+}
+
+.recipe2{
+	width: 100%;
+}
+
+.recipe2 img{
+	width: 80%;
+	height: 30%;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.recipe2 h3{
+	text-align: center;
+	color: #750000;
+}
+
+.recipe2 p{
+	text-align: center;
+	font-size: 14px;
+}
+
+.recipe2:hover{
+	cursor: pointer;
+}
+
+.recipe3{
+	width: 100%;
+}
+
+.recipe3 img{
+	width: 80%;
+	height: 30%;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.recipe3 h3{
+	text-align: center;
+	color: #750000;
+}
+
+.recipe3 p{
+	text-align: center;
+	font-size: 14px;
+}
+
+.recipe3:hover{
+	cursor: pointer;
+}
+
+.recipe4{
+	width: 100%;
+}
+
+.recipe4 img{
+	width: 80%;
+	height: 30%;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.recipe4 h3{
+	text-align: center;
+	color: #750000;
+}
+
+.recipe4 p{
+	text-align: center;
+	font-size: 14px;
+}
+
+.recipe4:hover{
+	cursor: pointer;
+}
+
+.footer{
+	height: 200px;
+	width: 100%;
+	display: flex;
 }
 
 .footer p{
 	padding-top: 5px;
 	color: #595959;
+}
+
+.contactUs{
+	width: 100%;
+	height: 150px;
+	margin: auto;
+	padding-left: 50px;
+	padding-top: 30px;
+	/*border: 2px solid red;*/
 }
 
 .contactUs input[type=text]{
@@ -191,15 +239,6 @@ a:hover{
 {
 	color: #750000;
 	background-color: #ffdbb3;
-}
-
-.contactUs{
-	width: 100%;
-	height: 150px;
-	margin: auto;
-	padding-left: 50px;
-	padding-top: 30px;
-	/*border: 2px solid red;*/
 }
 
 .contactUs h3{

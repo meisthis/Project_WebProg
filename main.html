@@ -7,13 +7,14 @@
 <body>
 	<div class="header">
 		<div class="logo">
-			<img src="asset/cat.jpg">
+			<img src="asset/LOGOFIX.png">
 		</div>
 
 		<div class="nav-bar">
-			<a href="">Home</a>
-			<a href="">Recipe</a>
-			<p></p>
+			<a href="main.html">Home</a>
+			<a href="recipe.html">Recipe</a>
+			<a href="registration.html">Register</a>	
+			<p></p>		
 		</div>
 	</div>
 
@@ -23,26 +24,29 @@
 		</div>
 		<div class="ingredient">
 			<div class="ingredient-label">
+			<h3>Filter</h3>
 				<div class="label">
-					<a href="">Meat</a>
-					<a href="">Vegetables</a>
-					<a href="">Spices</a>
-					<a href="">Noodle</a>
-					<a href="">Etc</a>
+					<button id="ingredient-label-meat" onclick="labelMeat()">Meat</button>
+
+					<button id="ingredient-label-vegetable" onclick="labelVegetable()">Vegetable</button>
+
+					<button id="ingredient-label-spice" onclick="labelSpice()">Spices</button>
+
+					<button id="ingredient-label-noodle" onclick="labelNoodle()">Noodle</button>
+
+					<button id="ingredient-label-fruit" onclick="labelFruit()">Fruit</button>
+
+					<button id="ingredient-label-etc" onclick="labelETC()">ETC</button>
 				</div>
 			</div>
 
 			<div class="ingredient-list">
+				<h3>Ingredient List</h3>
 				<form>
-					<div class="input-checkbox">
-						<input type="checkbox" name="ingredient">Pork
-						<p></p>
-						<input type="checkbox" name="ingredient">Chicken
-						<p></p>
-						<input type="checkbox" name="ingredient">Lamb
-						<p></p>
-						<input type="checkbox" name="">Beef
+					<div id="input-checkbox">
+						
 					</div>
+
 					<div class="input-button">
 						<input type="submit" name="">
 					</div>
@@ -53,7 +57,17 @@
 
 	<div class="footer">
 		<div class="contactUs">
-			<h1>Follow us on : </h1>
+			<h3>SUBSCRIBE</h3>
+			<p>Join our mailing list for updates, events and recipes</p>
+			<input type="text" placeholder="Email Address" name="email"> 
+
+			<button>
+				<b class="sub">Subscribe</b>
+			</button>
+		</div>
+
+		<div class="copyright">
+			<p>© 2018 CookIt! All Rights Reserved</p>
 			<span class="dot">
 				<img src="asset/twitter.png">
 			</span>
@@ -66,15 +80,7 @@
 				<img src="asset/instagram.png">
 			</span>
 		</div>
-
-		<div class="copyright">
-			<b>
-				<i>
-					<p>© 2018 CookIt! All Rights Reserved</p>		
-				</i>
-			</b>
-		</div>
 	</div>
-
 </body>
+<script type="text/javascript" src="main.js"></script>
 </html>
