@@ -1,0 +1,24 @@
+.full-content h1{
+	font-family: andalus;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.full-content hr {
+	width: 60%;
+	margin: auto;
+}
+
+.recipes>img{
+	width: 33%;
+	height: 28%;
+	/*dibikin 28 dulu heightnya soalnya mau dikasih tulisan made by siapa*/
+}
+
+.recipes{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	border: 1px solid black;
+}
+
