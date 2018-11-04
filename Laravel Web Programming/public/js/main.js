@@ -1,6 +1,6 @@
 var meatArray = ["Beef", "Pork", "Chicken", "Lamb"];
 var vegetableArray = ["Fumak", "Chaisim", "Khailan"];
-var spiceArray = ["Pepper", "Salt", "Sugar"];
+// var spiceArray = ["Pepper", "Salt", "Sugar"];
 var noodleArray = ["Udon", "Ramen"];
 var fruitArray = ["Apple", "Pineapple", "Watermelon", "Pear"];
 var etcArray = ["Soda", "Beer"]
@@ -58,33 +58,33 @@ function labelVegetable(){
 	}
 }
 
-function labelSpice(){	
+// function labelSpice(){
+// 	if(flag != 3){
+// 		clearDiv("input-checkbox");
+// 		flag=3;
+//
+// 		for(var i =0; i < spiceArray.length; i++){
+// 			var checkBox = document.createElement("input");
+// 			var label = document.createElement("label");
+// 			var myEnter2 = document.createElement("br");
+// 			var myEnter1 = document.createElement("br");
+//
+// 			checkBox.type = "checkbox";
+// 			checkBox.value = spiceArray[i];
+//
+// 			myDiv.appendChild(myEnter1);
+// 			myDiv.appendChild(checkBox);
+// 			myDiv.appendChild(label);
+// 			myDiv.appendChild(myEnter2);
+// 			label.appendChild(document.createTextNode(spiceArray[i]));
+// 		}
+// 	}
+// }
+
+function labelNoodle(){	
 	if(flag != 3){
 		clearDiv("input-checkbox");
 		flag=3;
-
-		for(var i =0; i < spiceArray.length; i++){
-			var checkBox = document.createElement("input");
-			var label = document.createElement("label");
-			var myEnter2 = document.createElement("br");
-			var myEnter1 = document.createElement("br");
-
-			checkBox.type = "checkbox";
-			checkBox.value = spiceArray[i];
-
-			myDiv.appendChild(myEnter1);
-			myDiv.appendChild(checkBox);
-			myDiv.appendChild(label);
-			myDiv.appendChild(myEnter2);
-			label.appendChild(document.createTextNode(spiceArray[i]));
-		}
-	}
-}
-
-function labelNoodle(){	
-	if(flag != 4){
-		clearDiv("input-checkbox");
-		flag=4;
 
 		for(var i =0; i < noodleArray.length; i++){
 			var checkBox = document.createElement("input");
@@ -105,9 +105,9 @@ function labelNoodle(){
 }
 
 function labelFruit(){
-	if(flag != 5){
+	if(flag != 4){
 		clearDiv("input-checkbox");
-		flag=5;
+		flag=4;
 
 		for(var i =0; i < fruitArray.length; i++){
 			var checkBox = document.createElement("input");
@@ -128,9 +128,9 @@ function labelFruit(){
 }
 
 function labelETC(){
-	if(flag != 6){
+	if(flag != 5){
 		clearDiv("input-checkbox");
-		flag=6;
+		flag=5;
 
 		for(var i =0; i < etcArray.length; i++){
 			var checkBox = document.createElement("input");

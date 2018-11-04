@@ -15,9 +15,7 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', 'mainController@viewLabel');
 
 Route::get('/register', function () {
     return view('register');
@@ -26,5 +24,4 @@ Route::get('/register', function () {
 Route::get('/recipe', function () {
     return view('recipe');
 });
-
 

@@ -18,12 +18,11 @@ class Recipe extends Migration
             $table->increments('Recipe_id')->unique();
             $table->string('Recipe_Name');
             $table->string('Recipe_Desc');
-            $table->string('Recipe_Rating');
-//            $table->foreign('Ingredient_Id')->on('Ingredients');
-//            $table->foreign('User_id')->on('Users');
+            $table->double('Recipe_Rating');
+            $table->integer('Ingredient_Id');//->references('Ingredient_Id')->on('Ingredients');
+            $table->integer('User_id');//->references('User_Id')->on('Users');
 //            $table->rememberToken();
             $table->timestamps();
-
         });
 
     }

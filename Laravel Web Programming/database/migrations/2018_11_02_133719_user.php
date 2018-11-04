@@ -16,9 +16,10 @@ class User extends Migration
         Schema::create('Users', function (Blueprint $table) {
             $table->increments('User_Id')->unique();
             $table->string('User_Name');
+            $table->string('User_Password');
             $table->string('User_address');
             $table->string('User_Email');
-            $table->integer('User_phone');
+            $table->string('User_phone');
 //            $table->rememberToken();
             $table->timestamps();
     });
