@@ -21,7 +21,8 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/recipe', function () {
-    return view('recipe');
-});
-
+//Route::get('/recipe', function () {
+//    return view('recipe');
+//});
+// /recipes nama url , recipecontroller nama controller , showall itu function di controller
+Route::get('/recipe',"RecipeController@showall");
