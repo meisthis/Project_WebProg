@@ -7,18 +7,65 @@
 .full-content hr {
 	width: 60%;
 	margin: auto;
+	margin-bottom: 20px;
 }
 
-.recipes>img{
-	width: 33%;
-	height: 28%;
-	/*dibikin 28 dulu heightnya soalnya mau dikasih tulisan made by siapa*/
+/*.recipes>img{*/
+	/*width: 33%;*/
+	/*height: 28%;*/
+	/*!*dibikin 28 dulu heightnya soalnya mau dikasih tulisan made by siapa*!*/
+/*}*/
+
+.recipes_content{
+	width: 100%;
+	height: 33%;
+	display: flex;
+	border: 1px solid black;
+}
+
+.recipes_content:hover{
+	background-color: #6b9dbb;
+	opacity: 80%;
+	cursor: pointer;
+}
+
+.recipes_content_description>span{
+	display: block;
+}
+
+.recipes_content_description>p{
+	margin: 20px;
+	color: black;
+}
+
+.recipes_content>img{
+	margin: 15px 10px 15px 10px;
+	width: 30%;
+	height: 80%;
+	/*margin: auto;*/
 }
 
 .recipes{
-	width: 80%;
+	width: 100%;
 	height: 80%;
 	margin: auto;
+}
+
+.search{
+	width: 100%;
+	height: 10%;
+	display: flex;
+	margin-left: 45%;
+}
+
+.sub_recipes{
+	width: 100%;
+	height: 90%;
 	border: 1px solid black;
+}
+
+.sub_recipes>a{
+	text-decoration: none;
+	cursor: pointer;
 }
 

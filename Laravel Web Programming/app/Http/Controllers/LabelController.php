@@ -7,5 +7,4 @@ use App\Label;
 
 class LabelController extends Controller
 {
-    //
 }

@@ -1,4 +1,4 @@
-.content-fill input[type='text'], input[type='password'] {
+.content-fill input[type=text], input[type=password] {
 	font-size: 16px;
     width: 95%;
     padding: 15px;
@@ -19,7 +19,7 @@
 }
 
 .content-fill{
-	padding: 85px;
+	/*padding: 85px;*/
 	margin: auto;
 	width: 40%;
 	height: 650px;
@@ -43,7 +43,7 @@
 	border: none;
 	color: white;
 	text-align: center;
-	margin: 5px 2px;
+	/*margin: 5px 2px;*/
 	font-size: 16px;
 	opacity: 1;
 	border-radius: 5px;

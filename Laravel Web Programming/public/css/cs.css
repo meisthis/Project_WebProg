@@ -19,12 +19,16 @@ a:hover{
 	height: 100px;
 	width: 100%;
 	display: flex;
+	position: sticky;
+	top: 0;
+	background-color: white;
 }
 
 .footer{
 	height: 200px;
 	width: 100%;
 	display: flex;
+	background-color: #750000;
 }
 
 .logo{
@@ -32,7 +36,7 @@ a:hover{
 }
 
 .logo>img{
-	width: 100%;
+	width: 75%;
 	height: 100px;
 }
 
@@ -44,17 +48,17 @@ a:hover{
 }
 
 .nav-bar>a{
-	position: sticky;
-	top: 0;
 	margin-left: 80px;
 	width: 33.3%;
 	text-decoration: none;
+	color: #750000;
+	font-size: 18px;
 }
 
 .nav-bar>p{
 	width: 100%;
 	border: 1px solid black;
-	margin-top: 45px;
+	margin-top: 40px;
 }
 
 .instruction{
@@ -71,19 +75,17 @@ a:hover{
 .ingredient{
 	height: 90%;
 	width: 100%;
-	/*border: 1px solid blue;*/
 	display: flex;
+	/*border: 1px solid red;*/
 }
 
 .ingredient-label{
-	width: 20%;
+	width: 10%;
 	height: 100%;
 	border: 2px solid black;
 }
 
 .ingredient-label>h3{
-	width: 100%;
-	height: 7%;
 	text-align:center;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -115,14 +117,22 @@ a:hover{
 }
 
 .ingredient-list{
-	width: 80%;
+	width: 90%;
 	height: 100%;
-	/*border: 1px solid black;*/
+	display: block;
 }
 
-.ingredient-list>h3{
+.ingredient-list>input{
+	padding: 10px;
+}
+
+.ingredient-title{
 	width: 100%;
-	height: 7%;
+	height: 10%;
+	margin-bottom: 20px;
+}
+
+.ingredient-title>h3{
 	text-align: center;
 	font-family: andalus;
 	padding-bottom: 22px;
@@ -130,9 +140,65 @@ a:hover{
 	border: 1px solid black;
 }
 
+.ingredient-checkbox{
+	width: 100%;
+	height: 70%;
+}
+
+.ingredient-tags{
+	width: 100%;
+	height: 17%;
+	border: 1px solid black;
+}
+
+.tags-title{
+	width: 100%;
+	height: 10%;
+}
+.tags-title>h3{
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+.tags{
+	width: 100%;
+	height: 70%;
+	margin-left: 5px;
+	margin-right: 5px;
+	display: flex;
+}
+
+.tags-button{
+	width: 100%;
+	height: 10%;
+	padding-left: 45%;
+}
+
+.tags-button>input[type=submit]{
+	font-size: 14px;
+	color: white;
+	width: 15%;
+	padding: 2px;
+	cursor: pointer;
+	border-radius: 3px;
+	border: 1px solid white;
+	background-color: #750000;
+}
+
 .input-button{
 	padding-left: 50%;
 	margin-top: 25px;
+}
+
+.input-button>input[type=submit]{
+	font-size: 14px;
+	color: white;
+	width: 15%;
+	padding: 2px;
+	cursor: pointer;
+	border-radius: 3px;
+	border: 1px solid white;
+	background-color: #750000;
 }
 
 .input-button>input:hover{
@@ -142,8 +208,9 @@ a:hover{
 }
 
 #input-checkbox{
-	height: 80%;
+	height: 93%;
 	width: 100%;
+	margin: 10px;
 	padding-left: 50%;
 	display: block;
 }
@@ -153,10 +220,11 @@ a:hover{
 	padding-bottom: 5px;
 }
 
-/*#input-checkbox>p{
-	padding-top: 5px;
-	padding-bottom: 5px;
-}*/
+.submit{
+	height: 8%;
+	width: 100%;
+	border: 1px solid black;
+}
 
 #input-checkbox>input:hover{
 	cursor: pointer;
@@ -164,7 +232,7 @@ a:hover{
 
 .footer p{
 	padding-top: 5px;
-	color: #595959;
+	color: white;
 }
 
 .contactUs input[type=text]{
@@ -183,7 +251,7 @@ a:hover{
 	background-color: #750000;
 	cursor: pointer;
 	border: 1px solid;
-	border-color: #750000;
+	border-color: #ffdbb3;
 	font-size: 14px;
 }
 
@@ -204,6 +272,7 @@ a:hover{
 
 .contactUs h3{
 	font-size: 16px;
+	color: #ffdbb3;
 }
 
 .contactUs p{

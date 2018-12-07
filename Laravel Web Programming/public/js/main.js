@@ -1,9 +1,13 @@
 var meatArray = ["Beef", "Pork", "Chicken", "Lamb"];
-var vegetableArray = ["Fumak", "Chaisim", "Khailan"];
-// var spiceArray = ["Pepper", "Salt", "Sugar"];
+var meatId = [2, 3, 1, 4];
+var vegetableArray = ["Fumak", "Chaisim", "Khailan", "BokChoy"];
+var vegetableId = [8, 6, 7, 9];
 var noodleArray = ["Udon", "Ramen"];
+var noodleId = [10, 11];
 var fruitArray = ["Apple", "Pineapple", "Watermelon", "Pear"];
-var etcArray = ["Soda", "Beer"]
+var fruitId = [12, 13, 14, 15];
+var etcArray = ["Soda", "Beer", "Chocolate" , "Bread"];
+var etcId = [16, 17];
 
 myDiv = document.getElementById("input-checkbox");
 var flag =0;
@@ -25,6 +29,7 @@ function labelMeat(){
 
 			checkBox.type = "checkbox";
 			checkBox.value = meatArray[i];
+			checkBox.name = meatId[i];
 
 			myDiv.appendChild(myEnter1);
 			myDiv.appendChild(checkBox);
@@ -48,6 +53,7 @@ function labelVegetable(){
 
 			checkBox.type = "checkbox";
 			checkBox.value = vegetableArray[i];
+            checkBox.name = vegetableId[i];
 
 			myDiv.appendChild(myEnter1);
 			myDiv.appendChild(checkBox);
@@ -94,6 +100,7 @@ function labelNoodle(){
 
 			checkBox.type = "checkbox";
 			checkBox.value = noodleArray[i];
+            checkBox.name = noodleId[i];
 
 			myDiv.appendChild(myEnter1);
 			myDiv.appendChild(checkBox);
@@ -117,6 +124,7 @@ function labelFruit(){
 
 			checkBox.type = "checkbox";
 			checkBox.value = fruitArray[i];
+            checkBox.name = fruitId[i];
 
 			myDiv.appendChild(myEnter1);
 			myDiv.appendChild(checkBox);
@@ -140,6 +148,7 @@ function labelETC(){
 
 			checkBox.type = "checkbox";
 			checkBox.value = etcArray[i];
+            checkBox.name = etcId[i];
 
 			myDiv.appendChild(myEnter1);
 			myDiv.appendChild(checkBox);

@@ -67,21 +67,6 @@ function checkForm()
 		error.innerHTML = "Address must be filled";
 		flag++;
 	}
-	else if(!address.value.startsWith("Jln."))
-	{
-		error.innerHTML = "Alamat must be started with Jln.";
-		flag++;
-	}
-	else if(!male.checked && !female.checked)
-	{
-		error.innerHTML = "Gender must be selected";
-		flag++;
-	}
-	else if(city.selectedIndex == 0)
-	{
-		error.innerHTML = "City has not been selected";
-		flag++;
-	}
 	else
 	{
 		window.location = "main.html"

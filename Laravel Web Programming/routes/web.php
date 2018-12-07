@@ -15,14 +15,23 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::get('/home', 'mainController@viewLabel');
-
 Route::get('/register', function () {
     return view('register');
 });
 
-//Route::get('/recipe', function () {
-//    return view('recipe');
-//});
-// /recipes nama url , recipecontroller nama controller , showall itu function di controller
+Route::get('/signin', function (){
+    return view('signin');
+});
+
+Route::get('/signout', 'UsersController@signOut');
+Route::get('/home', 'mainController@homeView');
 Route::get('/recipe',"RecipeController@showall");
+Route::get('/label',"IngredientController@getLabelIngredient");
+Route::get('/recipe/{id}', 'RecipeController@detailRecipe');
+
+Route::post('/registerUser', 'UsersController@registerUser');
+Route::post('/signInRequest', 'UsersController@userLogin');
+Route::post('/searchByName', "RecipeController@searchByName");
+Route::post('/submitIngredient', "RecipeController@processIngredient");
+
+

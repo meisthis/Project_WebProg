@@ -12,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/cs.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/regis.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/recipe.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/signin.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/recipe_detil.css') }}">
     </head>
     <body>
         <div class="header">
@@ -20,9 +22,13 @@
             </div>
 
             <div class="nav-bar">
-                <a href="/home" id="home">Home</a>
-                <a href="/recipe">Recipe</a>
-                <a href="/register">Register</a>
+                <a href="/home" id="home"><b>Home</b></a>
+                <a href="/recipe"><b>Recipe</b></a>
+                @if(!\Illuminate\Support\Facades\Session::get('login'))
+                    <a href="/signin"><b>Sign In</b></a>
+                @else
+                    <a href="/signout"><b>Sign Out</b></a>
+                @endif
                 <p></p>
             </div>
         </div>

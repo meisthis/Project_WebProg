@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Ingredient;
+use App\Label;
+use App\Users;
 use Illuminate\Http\Request;
 
 class mainController extends Controller
 {
-    public function viewLabel(){
-        $label = ['Meat','Vegetable', 'Noodle', 'Fruit', 'ETC'];
-        $labelClick = ['labelMeat()', 'labelVegetable()', 'labelNoodle()', 'labelFruit()', 'labelETC()'];
-        return view('home', compact('label'), compact('labelClick'));
+    public function homeView(){
+        $label = Label::All();
+        $ingredient = Ingredient::all();
+        return view('home', compact('label'), compact('ingredient'));
     }
 }
