@@ -11,7 +11,7 @@ a:hover{
 }
 
 .full-content{
-	height: 800px;
+	/*height: 800px;*/
 	width: 100%;
 }
 
@@ -29,6 +29,7 @@ a:hover{
 	width: 100%;
 	display: flex;
 	background-color: #750000;
+
 }
 
 .logo{
@@ -73,7 +74,7 @@ a:hover{
 }
 
 .ingredient{
-	height: 90%;
+	height: 800px;
 	width: 100%;
 	display: flex;
 	/*border: 1px solid red;*/

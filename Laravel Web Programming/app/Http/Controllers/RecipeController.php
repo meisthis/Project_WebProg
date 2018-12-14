@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Recipe;
+use App\recipeDetail;
 class RecipeController extends Controller
 {
     function showall(){
@@ -25,7 +26,10 @@ class RecipeController extends Controller
                 array_push($temp,$i);
             }
         }
-        $recipes = Recipe::whereIn('Ingredient_Id',$temp)->get()->paginate(3);
+        $recipes = recipeDetail::join('recipes','recipes.Recipe_Id','=','resepDetail.Recipe_Id')->join('ingredients','ingredients.Ingredient_Id','=','resepDetail.Ingredient_Id')
+        ->select('recipes.Recipe_Name', 'recipes.Recipe_Desc', 'recipes.Recipe_Rating', '')
+        ->whereIn('Ingredients.Ingredient_Id',$temp)->distinct()    
+        ->paginate(3);//join(namatable yg mau di join,namatable yg mau di join .namakolom,operator,namatableasli.namakolom)
 //        dd($recipes);
         return view('recipe', compact('recipes'));
     }
