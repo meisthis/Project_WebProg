@@ -4,8 +4,8 @@
 	padding-top: 20px;
 }
 
-.full-content hr {
-	width: 60%;
+.full-content>hr {
+	width: 70%;
 	margin: auto;
 	margin-bottom: 20px;
 }
@@ -17,15 +17,16 @@
 /*}*/
 
 .recipes_content{
-	width: 100%;
-	height: 33%;
+	width: 80%;
+	/*height: 33%;*/
 	display: flex;
-	border: 1px solid black;
+	border-bottom: 1px solid #dddddd;
+	margin: auto;
 }
 
 .recipes_content:hover{
 	background-color: #6b9dbb;
-	opacity: 80%;
+	/*background-color: #ffdbb3;*/
 	cursor: pointer;
 }
 
@@ -34,8 +35,13 @@
 }
 
 .recipes_content_description>p{
-	margin: 20px;
+	margin: 15px;
 	color: black;
+}
+
+.like-button>form>input:hover{
+	cursor: pointer;
+	background-color: red;
 }
 
 .recipes_content>img{
@@ -43,6 +49,10 @@
 	width: 30%;
 	height: 80%;
 	/*margin: auto;*/
+}
+
+.recipe-content>ul>a{
+	text-decoration: none;
 }
 
 .recipes{
@@ -54,18 +64,48 @@
 .search{
 	width: 100%;
 	height: 10%;
-	display: flex;
-	margin-left: 45%;
+	text-align: center;
+}
+
+.search>form>input[type=text]{
+	border: 1px solid black;
+	width: 250px;
+	padding: 7px;
+	font-size: 15px;
+	border-radius: 20px;
+	outline: none;
+	margin-bottom: 1.5%;
+}
+
+.search>form>input[type=submit]{
+	font-size: 15px;
+	color: white;
+	padding: 7px;
+	width: 70px;
+	cursor: pointer;
+	border-radius: 20px;
+	border: none;
+	background-color: #750000;
+	outline: none;
 }
 
 .sub_recipes{
 	width: 100%;
 	height: 90%;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 .sub_recipes>a{
 	text-decoration: none;
 	cursor: pointer;
 }
+/*list dari sini ke bawah*/
+.sub_recipes>ul{
+	display: inline-flex;
+	margin-left: 40%;
+	list-style-type: none;
+}
 
+.pagination>li{
+	margin: 0px 10px 0px 10px;
+}

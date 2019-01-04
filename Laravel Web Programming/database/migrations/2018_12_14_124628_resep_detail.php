@@ -13,13 +13,12 @@ class ResepDetail extends Migration
      */
     public function up()
     {
-    
-        Schema::create('ResepDetail', function (Blueprint $table) {
-            $table->increments('Detail_id')->unique();
-            $table->integer('Recipe_id')->unsigned();//nyamain tipe data soalnya recipe id itu defaultnya unsigned
-            $table->foreign('Recipe_id')->references('Recipe_id')->on('recipes')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('Ingredient_id')->unsigned();
-            $table->foreign('Ingredient_id')->references('Ingredient_id')->on('ingredients')->onDelete('cascade')->onUpdate('cascade');
+        Schema::create('recipe_detail', function (Blueprint $table) {
+            $table->increments('RecipeDetailId')->unique();
+            $table->integer('RecipeId')->unsigned();//nyamain tipe data soalnya recipe id itu defaultnya unsigned
+//            $table->foreign('RecipeId')->references('RecipeId')->on('recipe')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('IngredientId')->unsigned();
+//            $table->foreign('IngredientId')->references('IngredientId')->on('ingredient')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });
@@ -32,6 +31,6 @@ class ResepDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('recipe_detail');
     }
 }

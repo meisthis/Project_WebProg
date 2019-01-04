@@ -10,9 +10,10 @@
 	text-align: center;
 }
 
-hr{
-	width: 26%;
+.login-form hr{
+	width: 30%;
 	margin: auto;
+	margin-bottom: 1%;
 }
 
 .login-form p{
@@ -35,7 +36,17 @@ hr{
 	text-decoration: underline;
 }
 
-.login-form input[type=text], input[type=password]{
+.login-form input[type=text]{
+	width: 25%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 3px;
+	margin: 10px 0 5px 500px;
+	border: none;
+	background: #ffdbb3;
+}
+
+.login-form input[type=password]{
 	width: 25%;
 	padding: 10px;
 	font-size: 16px;

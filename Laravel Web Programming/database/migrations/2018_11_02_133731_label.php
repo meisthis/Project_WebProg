@@ -13,9 +13,9 @@ class Label extends Migration
      */
     public function up()
     {
-        Schema::create('Labels', function (Blueprint $table) {
-            $table->increments('Label_Id')->unique();
-            $table->string('Label_Name');
+        Schema::create('label', function (Blueprint $table) {
+            $table->increments('LabelId')->unique();
+            $table->string('LabelName');
 
 //            $table->rememberToken();
             $table->timestamps();
@@ -29,6 +29,6 @@ class Label extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('label');
     }
 }

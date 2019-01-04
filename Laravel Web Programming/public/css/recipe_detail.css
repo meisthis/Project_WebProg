@@ -1,4 +1,116 @@
-.content-recipe-detail{
-    width: 100%;
+.recipeDetail-parent {
+    border-left: 1px solid #750000;
+    border-right: 1px solid #750000;
+    margin: auto;
+    margin-bottom: 1%;
     height: 100%;
+    width: 70%;
+}
+
+.recipeDetail-parent hr{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.recipeDetail-header{
+    margin: 15px;
+    margin-left: 10%;
+}
+
+.recipeDetail-header h2{
+    margin-bottom: 1%;
+}
+
+.recipeDetail-header p{
+    font-size: 15px;
+    /*margin-bottom: 1%;*/
+    color: #595959;
+}
+
+.recipeDetail-header>p{
+    display: block;
+}
+
+.recipeDetail-header>input{
+    display: inline-block;
+}
+
+.recipeDetail-img img{
+    width: 50%;
+    height: 40%;
+    margin-left: 10%;
+}
+
+.recipeDetail-desc{
+    margin-left: 10%;
+}
+
+.recipeDetail-desc h3{
+    margin-bottom: 1%;
+    margin-top: 3%;
+}
+
+.recipeDetail-comments{
+    display: block;
+}
+
+.recipeDetail-comments h3{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.recipeDetail-comments>form>textarea{
+    margin-top: 1%;
+    margin-left: 10%;
+    width: 80%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.recipeDetail-comments>form>input[type=submit]{
+    margin-left: 83%;
+    margin-top: 1%;
+    padding: 4px;
+    width: 8%;
+    border-radius: 3px;
+    background-color: #750000;
+    border: none;
+    color: white;
+}
+
+.recipeDetail-comments>form>input[type=submit]:hover{
+    cursor: pointer;
+}
+
+.recipeDetail-comments>ul{
+    list-style-type: none;
+}
+
+.recipe-commend{
+    width: 80%;
+    height: 20%;
+    margin-left: 10%;
+    border: 1px solid black;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 5px;
+    /*border-radius: 8px;*/
+    border-color: #9d9d9d;
+}
+
+.recipe-commend-content{
+    margin-top: 1%;
+}
+
+.recipe-commend-delete>a{
+    margin-left: 80%;
+    text-decoration: none;
+    color: black;
+}
+
+.recipe-commend-delete>a:hover{
+    cursor: pointer;
+    color: red;
+    font-weight: bolder;
 }

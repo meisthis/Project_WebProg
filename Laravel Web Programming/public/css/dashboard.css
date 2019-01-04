@@ -1,0 +1,76 @@
+.content-parent{
+    height: 100%;
+    width: 100%;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.content-img{
+    background-color: #750000;
+}
+
+.content-img img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+}
+
+.content-img-text{
+    font-size: 50px;
+    top: 40%;
+    left: 21%;
+    position: absolute;
+    color: white;
+
+    animation-duration: 1s;
+    animation-delay: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.content-img-text1 {
+    position: absolute;
+    margin-left: 20%;
+    font-size: 26px;
+    top: 60%;
+    color: white;
+    width: 60%;
+    display: flex;
+    /*border: 1px solid black;*/
+
+    animation-duration: 1s;
+    animation-delay: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.content-img-text1 p{
+    font-size: 22px;
+    margin: 10px;
+    text-align: left;
+}
+
+.content-img-textLeft{
+    width: 100%;
+    height: 100%;
+}
+
+.content-img-textRight{
+    width: 100%;
+    height: 100%;
+}
+
+.content-img-text--fadeinup{
+    animation-name: fadeInUp
+}
+
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}

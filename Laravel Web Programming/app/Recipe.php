@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recipe extends Model
 {
-    protected $table ='recipes';
-    public $timestamps =false;
+    protected $table ='recipe';
+    protected $primaryKey = 'RecipeId';
 
-    public function ingredient(){
-        return $this->belongsTo(Ingredient::class, 'Ingredient_Id');
+    public function recipeDetail(){
+        return $this->hasMany(RecipeDetail::class, 'RecipeId', 'RecipeId');
     }
 
     public function user(){
-        return $this->belongsTo(Users::class, 'User_Id');
+        return $this->belongsTo(Users::class, 'UserId', 'UserId');
     }
 }

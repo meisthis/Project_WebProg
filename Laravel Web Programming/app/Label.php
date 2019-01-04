@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Label extends Model
 {
-    protected $table ='labels';
+    protected $table ='label';
+    protected $primaryKey ='LabelId';
     public $timestamps = false;
 
     public function ingredient(){
-        return $this->hasMany(Ingredient::class);
+        return $this->hasMany(Ingredient::class, 'LabelId', 'LabelId');
     }
 }

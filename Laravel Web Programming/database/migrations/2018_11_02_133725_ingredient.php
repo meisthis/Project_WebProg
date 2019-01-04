@@ -13,10 +13,10 @@ class Ingredient extends Migration
      */
     public function up()
     {
-        Schema::create('Ingredients', function (Blueprint $table) {
-            $table->increments('Ingredient_Id')->unique();
-            $table->string('Ingredient_Name');
-            $table->integer('Label_Id');//->references('Label_Id')->on('Labels');
+        Schema::create('ingredient', function (Blueprint $table) {
+            $table->increments('IngredientId')->unique();
+            $table->string('IngredientName');
+            $table->integer('LabelId');//->references('Label_Id')->on('Labels');
 //            $table->rememberToken();
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class Ingredient extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('ingredient');
     }
 }

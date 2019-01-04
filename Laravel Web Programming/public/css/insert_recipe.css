@@ -1,0 +1,72 @@
+.new-recipe-parent{
+    width: 100%;
+    height: 100%;
+}
+
+.new-recipe-parent>hr{
+    width: 70%;
+    margin: auto;
+}
+
+.new-recipe-content{
+    width: 100%;
+    display: flex;
+    margin-top: 2%;
+    /*border: 1px solid red;*/
+}
+
+.new-recipe-content>form{
+    width: 70%;
+    /*border: 1px solid black;*/
+    margin: auto;
+}
+
+.new-recipe-content input[type=submit]{
+    width: 8%;
+    /*border: 1px solid black;*/
+    padding: 3px;
+    border: none;
+    background-color: #750000;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.new-recipe-content input[type=submit]:hover{
+    cursor: pointer;
+}
+
+.new-recipe-form input[type=text]{
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.new-recipe-form input[type=file]{
+    width: 30%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    /*border: 1px solid red;*/
+}
+
+.new-recipe-checkbox{
+    width: 100%;
+    /*border: 1px solid red;*/
+    margin-bottom: 10px;
+}
+
+.new-recipe-content textarea{
+    /*resize: none;*/
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.alert{
+    width: 20%;
+    color: red;
+    height: 20%;
+    margin: auto;
+}

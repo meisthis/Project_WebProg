@@ -13,13 +13,13 @@ class User extends Migration
      */
     public function up()
     {
-        Schema::create('Users', function (Blueprint $table) {
-            $table->increments('User_Id')->unique();
-            $table->string('User_Name');
-            $table->string('User_Password');
-            $table->string('User_address');
-            $table->string('User_Email');
-            $table->string('User_phone');
+        Schema::create('user', function (Blueprint $table) {
+            $table->increments('UserId')->unique();
+            $table->string('UserName');
+            $table->string('UserPassword');
+            $table->string('UserAddress');
+            $table->string('UserEmail');
+            $table->string('UserPhone');
 //            $table->rememberToken();
             $table->timestamps();
     });
@@ -31,6 +31,6 @@ class User extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('user');
     }
 }

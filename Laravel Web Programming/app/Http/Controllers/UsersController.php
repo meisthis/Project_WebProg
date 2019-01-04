@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Recipe;
+use App\Subscription;
+use Carbon\Carbon;
 use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use App\Users;
@@ -26,13 +29,13 @@ class UsersController extends Controller
             $email = $req->signInEmail;
             $password = $req->signInPassword;
 
-            $login = Users::where('User_Email', $email)->first();
+            $login = Users::where('UserEmail', $email)->first();
 
             if ($login != null) {
-                if ($password == $login->User_Password) {
+                if (Hash::check($password, $login->UserPassword)) {
                     Session::put('login', true);
-    //                dd(Session::get('login'));
-                    return redirect('/');
+                    Session::put('user', $login);
+                    return redirect('/dashboard');
                 } else {
                     return redirect('/signin')->with('alert', 'Invalid password');
                 }
@@ -43,31 +46,60 @@ class UsersController extends Controller
     }
 
     public function signOut(){
+        $user = Session::get('user');
+        $user->updated_at = Carbon::now();
+        $user->save();
+
         Session::flush();
-        return redirect('/home');
+        return redirect('/');
     }
 
     public function registerUser(Request $req)
     {
         $validator = Validator::make($req->all(), [
-            "registerName" => "required|alphaNum|min:3",
+            "registerName" => "required|min:3",
             "registerEmail" => "required|email",
-            "registerPassword" => "required|alphaNum|min:6",
-            "registerAddress" => "required:alphaNum",
+            "registerPassword" => "required|min:6",
+            "registerAddress" => "required",
             "registerPhoneNumber" => "required|numeric",
         ]);
-
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         } else {
             $user = new Users();
-            $user->User_Name = $req->registerName;
-            $user->User_Email = $req->registerEmail;
-            $user->User_Password = $req->registerPassword;
-            $user->User_address = $req->registerAddress;
-            $user->User_phone = $req->registerPhoneNumber;
+            $user->UserName = $req->registerName;
+            $user->UserEmail = $req->registerEmail;
+            $user->UserPassword = Hash::make($req->registerPassword);
+            $user->UserAddress= $req->registerAddress;
+            $user->UserPhone= $req->registerPhoneNumber;
             $user->save();
             return redirect('/signin');
         }
+    }
+
+    public function viewProfile($id){
+        $recipe = Recipe::where('UserId', $id)->paginate(3);
+        $user = Users::where('UserId', $id)->first();
+        $subs= Subscription::where('UserSubscribedId', $id)->where('UserId', Session::get('user')->UserId)->first();
+
+        return view('Session Login.view_profile', compact('user'), compact('recipe'))->with(compact('subs'));
+    }
+
+    public function subscribeUser($id){
+        $subs = Subscription::where('UserSubscribedId', $id)->where('UserId', Session::get('user')->UserId)->first();
+
+        if($subs == null) {
+            $sub = new Subscription();
+            $sub->UserId = Session::get('user')->UserId;
+            $sub->UserSubscribedId = $id;
+            $sub->save();
+        }
+        return redirect()->back();
+    }
+
+    public function unsubscribeUser($id){
+        Subscription::where('UserSubscribedId', $id)->where('UserId' , Session::get('user')->UserId)->delete();
+
+        return redirect()->back();
     }
 }

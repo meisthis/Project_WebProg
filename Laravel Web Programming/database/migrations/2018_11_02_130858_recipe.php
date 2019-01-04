@@ -14,17 +14,18 @@ class Recipe extends Migration
     public function up()
     {
 
-        Schema::create('Recipes', function (Blueprint $table) {
-            $table->increments('Recipe_id')->unique();
-            $table->string('Recipe_Name');
-            $table->string('Recipe_Desc');
-            $table->double('Recipe_Rating');
-            $table->integer('Ingredient_Id');//->references('Ingredient_Id')->on('Ingredients');
-            $table->integer('User_id');//->references('User_Id')->on('Users');
-//            $table->rememberToken();
+        Schema::create('recipe', function (Blueprint $table) {
+            $table->increments('RecipeId')->unique();
+            $table->string('RecipeName');
+            $table->string('RecipeDescription');
+            $table->double('RecipeRating')->default(0.0);
+            $table->integer('UserId');//->references('User_Id')->on('Users');
+            $table->string('RecipeImageName');
+            $table->string('RecipeHyperlink')->nullable();
+            $table->integer('RecipeViewed')->default(0);
+            $table->text('RecipeInstruction');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -34,6 +35,6 @@ class Recipe extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('recipe');
     }
 }

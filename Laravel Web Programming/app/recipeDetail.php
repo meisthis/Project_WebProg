@@ -4,9 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class recipeDetail extends Model
+class RecipeDetail extends Model
 {
-    protected $table ='resepdetail';
-    public $timestamps =false;
- 
- }
+    protected $table ='recipe_detail';
+    protected $primaryKey = 'RecipeDetailId';
+    public $timestamps=false;
+
+    public function recipe(){
+        return $this->belongsTo(Recipe::class, 'RecipeId', 'RecipeId');
+    }
+
+    public function ingredient(){
+        return $this->belongsTo(Ingredient::class, 'IngredientId', 'IngredientId');
+    }
+}

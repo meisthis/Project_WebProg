@@ -6,76 +6,96 @@
  * Time: 9:10 PM
  */
 
-class ingredientSeeder
+class ingredientSeeder extends DatabaseSeeder
 {
     public function run(){
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Chicken',
-            'Label_Id' => '1'
+            'IngredientName' => 'Chicken',
+            'LabelId' => '1'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Beef',
-            'Label_Id' => '1'
+            'IngredientName' => 'Beef',
+            'LabelId' => '1'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Pork',
-            'Label_Id' => '1'
+            'IngredientName' => 'Pork',
+            'LabelId' => '1'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Lamb',
-            'Label_Id' => '1'
+            'IngredientName' => 'Lamb',
+            'LabelId' => '1'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Chicken',
-            'Label_Id' => '1'
+            'IngredientName' => 'Chaisim',
+            'LabelId' => '2'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Chaisim',
-            'Label_Id' => '2'
+            'IngredientName' => 'Khailand',
+            'LabelId' => '2'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Khailand',
-            'Label_Id' => '2'
+            'IngredientName' => 'Fumak',
+            'LabelId' => '2'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Fumak',
-            'Label_Id' => '2'
+            'IngredientName' => 'BokChoy',
+            'LabelId' => '2'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'BokChoy',
-            'Label_Id' => '2'
+            'IngredientName' => 'Udon',
+            'LabelId' => '3'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Udon',
-            'Label_Id' => '3'
+            'IngredientName' => 'Ramyun',
+            'LabelId' => '3'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Ramyun',
-            'Label_Id' => '3'
+            'IngredientName' => 'Apple',
+            'LabelId' => '4'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Apple',
-            'Label_Id' => '4'
+            'IngredientName' => 'Pineapple',
+            'LabelId' => '4'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Pineapple',
-            'Label_Id' => '4'
+            'IngredientName' => 'Watermelon',
+            'LabelId' => '4'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Watermelon',
-            'Label_Id' => '4'
+            'IngredientName' => 'Pear',
+            'LabelId' => '4'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Pear',
-            'Label_Id' => '4'
+            'IngredientName' => 'Soda',
+            'LabelId' => '5'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Soda',
-            'Label_Id' => '5'
+            'IngredientName' => 'Beer',
+            'LabelId' => '5'
         ]);
         \App\Ingredient::insert([
-            'Ingredient_Name' => 'Beer',
-            'Label_Id' => '5'
+            'IngredientName' => 'Garlic',
+            'LabelId' => '5'
+        ]);
+        \App\Ingredient::insert([
+            'IngredientName' => 'Shallot',
+            'LabelId' => '5'
+        ]);
+        \App\Ingredient::insert([
+            'IngredientName' => 'Chilli',
+            'LabelId' => '5'
+        ]);
+        \App\Ingredient::insert([
+            'IngredientName' => 'Tomato',
+            'LabelId' => '5'
+        ]);
+        \App\Ingredient::insert([
+            'IngredientName' => 'Rice',
+            'LabelId' => '5'
+        ]);
+        \App\Ingredient::insert([
+            'IngredientName' => 'Mushroom',
+            'LabelId' => '5'
         ]);
     }
 }

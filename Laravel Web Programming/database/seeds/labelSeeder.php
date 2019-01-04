@@ -6,23 +6,23 @@
  * Time: 8:52 PM
  */
 
-class labelSeeder
+class labelSeeder extends DatabaseSeeder
 {
     public function run(){
         \App\Label::insert([
-            'Label_Name' => 'Meat'
+            'LabelName' => 'Meat'
         ]);
         \App\Label::insert([
-            'Label_Name' => 'Vegetable'
+            'LabelName' => 'Vegetable'
         ]);
         \App\Label::insert([
-            'Label_Name' => 'Noodle'
+            'LabelName' => 'Noodle'
         ]);
         \App\Label::insert([
-            'Label_Name' => 'Fruit'
+            'LabelName' => 'Fruit'
         ]);
         \App\Label::insert([
-            'Label_Name' => 'ETC'
+            'LabelName' => 'ETC'
         ]);
     }
 }
